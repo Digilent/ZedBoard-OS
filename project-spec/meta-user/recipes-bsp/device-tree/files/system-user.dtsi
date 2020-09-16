@@ -1,0 +1,17 @@
+/include/ "system-conf.dtsi"
+/ {
+};
+&PmodOLEDrgb_0_axi_gpio_0
+{
+	compatible = "generic-uio";
+};
+&PmodOLEDrgb_0_axi_quad_spi_0
+{
+	is-decoded-cs = <0>;
+  	status = "okay";
+	spidev@0x00 {
+		compatible = "spidev";
+		spi-max-frequency = <50000000>;
+		reg = <0>;
+		};
+};
